@@ -11,7 +11,6 @@ import handler from 'express-async-handler'
         const mediumQuestionsArray = lodash.sampleSize(Object.values(data).filter((question)=>question.difficulty==='Medium'),parseInt((TOTAL_MARKS*MEDIUM_PERCENTAGE)/10))
         const hardQuestionsArray = lodash.sampleSize(Object.values(data).filter((question)=>question.difficulty==='Hard'),parseInt((TOTAL_MARKS*HARD_PERCENTAGE)/15))
         const totalSelectedQuestions = [...easyQuestionsArray,...mediumQuestionsArray,...hardQuestionsArray]
-        console.log(`totalSelectedQuestions: ${totalSelectedQuestions}`)
         return res.status(200).json(totalSelectedQuestions)
     
 })
