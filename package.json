@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "lodash": "^4.17.21"
+    "express-async-handler": "^1.2.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.16"
   }
 }
